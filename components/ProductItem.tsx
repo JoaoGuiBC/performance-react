@@ -7,8 +7,13 @@ import { AddProducToWishlistProps } from "./AddProductToWishlist";
 const AddProductToWishlist = dynamic<AddProducToWishlistProps>(() => {
   return import('./AddProductToWishlist').then(mod => mod.AddProductToWishlist);
 }, {
-  loading: () => <span>Loading...</span>
+  loading: function loadingSpan() {
+    return (
+      <span>Loading...</span>
+    )}
 });
+
+AddProductToWishlist.displayName = 'AddProductToWishlist';
 
 interface ProductItemProps {
   product: {
