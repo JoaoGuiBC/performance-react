@@ -1,4 +1,4 @@
-import ProductItem from "./productItem";
+import { ProductItem } from "./ProductItem";
 
 interface SearchResultsProps {
   results: Array<{
@@ -8,7 +8,7 @@ interface SearchResultsProps {
   }>
 }
 
-const SearchResults: React.FC<SearchResultsProps> = ({ results }) => {
+export function SearchResults ({ results }: SearchResultsProps) {
   return (
     <div>
       {results.map(product => {
@@ -19,5 +19,3 @@ const SearchResults: React.FC<SearchResultsProps> = ({ results }) => {
     </div>
   );
 }
-
-export default SearchResults;

@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react'
-import SearchResults from '../components/searchResults';
+import { SearchResults } from '../components/SearchResults';
 
 export default function Home() {
   const [inputValue, setInputValue] = useState('');
